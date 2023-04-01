@@ -5,6 +5,7 @@ html {
   --pearl: #e2d4ba;
   --oldrose: #af7a6d;
   --wine: #653239;
+  scroll-behavior: smooth;
 }
 
 * {

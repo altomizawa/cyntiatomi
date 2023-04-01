@@ -17,7 +17,7 @@
         />
         <ul class="navbar__menu">
           <li class="navbar__menu-item">
-            <a href="#" class="navbar__menu-link">COLLECTIONS</a>
+            <a href="#collections" class="navbar__menu-link">COLLECTIONS</a>
           </li>
           <li class="navbar__menu-item">
             <a href="#" class="navbar__menu-link">EARRINGS</a>
@@ -44,10 +44,85 @@
         <div class="header__overlay"></div>
         <img src="./assets/cover.jpg" alt="" class="header__img" />
         <div class="header__title-wrapper">
-          <h1 class="header__title">MODERN JEWELRY</h1>
-          <h2 class="header__subtitle">by cyntiatomi</h2>
+          <div class="header__title-animation-wrapper">
+            <h1 class="header__title">MODERN JEWELRY</h1>
+            <h2 class="header__subtitle">by cyntiatomi</h2>
+          </div>
+        </div>
+        <lottie-player
+          src="https://assets2.lottiefiles.com/datafiles/akyZzR7Uh54Auv8Vx2JfvmWjQjiLrs67Q5tKaneh/scroll/scroll.json"
+          background="transparent"
+          speed="1"
+          loop
+          autoplay
+          class="scroll-icon"
+        ></lottie-player>
+      </section>
+      <section class="collection">
+        <h2 class="collection__title" id="collections">
+          EXPLORE OUR COLLECTIONS
+        </h2>
+        <div class="collection__carousel">
+          <div class="collection__thumbnail-wrapper">
+            <img
+              src="./assets/collections/fences.png"
+              alt="image of woman wearing jewelry from Cyntia Tomi"
+              class="collection__thumbnail"
+            />
+            <h3 class="collection__thumbnail-title">CORES DO BRASIL</h3>
+          </div>
+          <div class="collection__thumbnail-wrapper">
+            <img
+              src="./assets/collections/geometry.png"
+              alt="image of woman wearing jewelry from Cyntia Tomi"
+              class="collection__thumbnail"
+            />
+            <h3 class="collection__thumbnail-title">FENCES</h3>
+          </div>
+          <div class="collection__thumbnail-wrapper">
+            <img
+              src="./assets/collections/lunar.png"
+              alt="image of woman wearing jewelry from Cyntia Tomi"
+              class="collection__thumbnail"
+            />
+            <h3 class="collection__thumbnail-title">FRESTAS</h3>
+          </div>
+          <div class="collection__thumbnail-wrapper">
+            <img
+              src="./assets/collections/fences.png"
+              alt="image of woman wearing jewelry from Cyntia Tomi"
+              class="collection__thumbnail"
+            />
+            <h3 class="collection__thumbnail-title">LUNAR</h3>
+          </div>
+          <div class="collection__thumbnail-wrapper">
+            <img
+              src="./assets/collections/geometry.png"
+              alt="image of woman wearing jewelry from Cyntia Tomi"
+              class="collection__thumbnail"
+            />
+            <h3 class="collection__thumbnail-title">GEOMETRY</h3>
+          </div>
+          <div class="collection__thumbnail-wrapper">
+            <img
+              src="./assets/collections/lunar.png"
+              alt="image of woman wearing jewelry from Cyntia Tomi"
+              class="collection__thumbnail"
+            />
+            <h3 class="collection__thumbnail-title">PAGES</h3>
+          </div>
+          <div class="collection__thumbnail-wrapper">
+            <img
+              src="./assets/collections/lunar.png"
+              alt="image of woman wearing jewelry from Cyntia Tomi"
+              class="collection__thumbnail"
+            />
+            <h3 class="collection__thumbnail-title">MAZE</h3>
+          </div>
         </div>
       </section>
     </main>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="./javacript/index.js"></script>
   </body>
 </html>
