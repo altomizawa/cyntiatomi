@@ -6,56 +6,68 @@ const collectionShortTitleEl = document.querySelectorAll(
 );
 
 const collectionActiveEl = document.querySelectorAll(".collection_active");
-const collectionCloseButtton = document.querySelectorAll(
-  ".collection__close-button"
+const imagePosition = Array.from(
+  document.querySelectorAll(".collection__thumbnail")
 );
-//CLICK TO OPEN FUNCTION
-collectionWrapperEl.forEach((item, index) => {
-  item.addEventListener("click", () => {
-    item.classList.add("collection__thumbnail-wrapper_active");
+
+//-----------------CLICK TO OPEN FUNCTION-----------------------
+collectionWrapperEl.forEach((column, colIndex) => {
+  column.addEventListener("click", () => {
+    column.classList.toggle("collection__thumbnail-wrapper_active");
+    console.log(imagePosition[colIndex]);
+    imagePosition[colIndex].style.objectPosition = "0";
     hideShortTitle();
-    setTimeout(openCollection, 500);
+    setTimeout(showDescription, 500);
 
-    //OPEN COLLECTION DESCRIPTION FUNCTION
-    function openCollection() {
-      collectionActiveEl[index].classList.add("collection_active_is-open");
+    //SHOW DESCRIPTION FUNCTION
+    function showDescription() {
+      collectionActiveEl[colIndex].classList.toggle(
+        "collection_active_is-open"
+      );
     }
 
-    //CLOSE COLLECTION DESCRIPTION FUNCTION
-    function closeCollection() {
-      collectionActiveEl[index].classList.remove("collection_active_is-open");
+    //------------CLOSE COLLECTION FUNCTION------------
+    function closeWrapper() {
+      column.classList.toggle("collection__thumbnail-wrapper_active");
+      hideDescription();
     }
 
-    //new array from remaining items
-    const newArray1 = collectionWrapperEl.slice(0, index);
-    const newArray2 = collectionWrapperEl.slice(index + 1);
+    //HIDE DESCRIPTION FUNCTION
+    function hideDescription() {
+      collectionActiveEl[colIndex].classList.toggle(
+        "collection_active_is-open"
+      );
+    }
+
+    //-------------NEW ARRAY FROM REMAINING ITEMS----------------
+    const newArray1 = collectionWrapperEl.slice(0, colIndex);
+    const newArray2 = collectionWrapperEl.slice(colIndex + 1);
     const remainingCollection = newArray1.concat(newArray2);
 
     //change remaining cards
     remainingCollection.forEach((remainingCard) => {
-      remainingCard.classList.add("collection__thumbnail-wrapper_inactive");
-
-      item.addEventListener("click", () => {
-        item.classList.remove("collection__thumbnail-wrapper_active");
-        remainingCard.classList.remove(
-          "collection__thumbnail-wrapper_inactive"
-        );
-        showShortTitle();
-      });
+      remainingCard.classList.toggle("collection__thumbnail-wrapper_inactive");
     });
   });
 });
 
 function hideShortTitle() {
   collectionShortTitleEl.forEach((item) => {
-    item.style.opacity = "0";
-    item.style.transition = "500ms";
+    item.classList.toggle("collection__hide-description");
   });
 }
 
-function showShortTitle() {
-  collectionShortTitleEl.forEach((item) => {
-    item.style.opacity = "1";
-    item.style.transition = "500ms";
-  });
-}
+//CLOSE WRAPPER
+// const collectionCloseButtton = document.querySelectorAll(
+//   ".collection__close-button"
+// );
+
+// console.log(collectionCloseButtton);
+// collectionCloseButtton.forEach((button, btnInd) => {
+//   button.addEventListener("click", () => {
+//     console.log(collectionWrapperEl[btnInd]);
+//     collectionWrapperEl[btnInd].style.width = "calc(100%/7)";
+//     collectionActiveEl[btnInd].classList.remove("collection_active_is-open");
+//   });
+// });
+//CLOSE WRAPPER END
