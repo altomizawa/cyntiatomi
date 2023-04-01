@@ -44,5 +44,19 @@ a {
   font-weight: 500;
   line-height: 1;
   text-decoration: none;
-  color: var(--wine);
+  color: var(--nyanza);
+}
+
+button {
+  background-color: transparent;
+  font-family: "Raleway", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1;
+  text-decoration: none;
+  color: var(--nyanza);
+  border: 1px var(--nyanza) solid;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
 }
