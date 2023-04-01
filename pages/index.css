@@ -188,6 +188,7 @@
 .collection__thumbnail-wrapper {
   cursor: pointer;
   width: calc(100% / 7);
+  /* width: 80%; */
   position: relative;
   /* border: solid black 1px; */
   box-shadow: -4px 0 4px rgba(0, 0, 0, 0.5);
@@ -227,4 +228,52 @@
   left: 0.5rem;
   color: white;
   text-align: left;
+}
+
+.collection_active {
+  position: absolute;
+  width: 60%;
+  height: 80%;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  padding-left: 5rem;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: 500ms ease-in-out;
+}
+.collection__title {
+  font-family: "Raleway", sans-serif;
+  font-size: 2rem;
+  letter-spacing: 0.2rem;
+  font-weight: 500;
+  line-height: 1;
+  color: var(--wine);
+  padding: 0;
+  margin-bottom: 2rem;
+}
+
+.collection__text {
+  font-family: "Raleway", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 2;
+  color: black;
+}
+
+.collection_active_is-open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.collection__close-button {
+  margin-top: 2rem;
+  padding: 0.5rem;
+  border: 1px solid black;
+  width: 6rem;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
 }

@@ -5,11 +5,26 @@ const collectionShortTitleEl = document.querySelectorAll(
   ".collection__thumbnail-title"
 );
 
+const collectionActiveEl = document.querySelectorAll(".collection_active");
+const collectionCloseButtton = document.querySelectorAll(
+  ".collection__close-button"
+);
 //CLICK TO OPEN FUNCTION
 collectionWrapperEl.forEach((item, index) => {
   item.addEventListener("click", () => {
     item.classList.add("collection__thumbnail-wrapper_active");
     hideShortTitle();
+    setTimeout(openCollection, 500);
+
+    //OPEN COLLECTION DESCRIPTION FUNCTION
+    function openCollection() {
+      collectionActiveEl[index].classList.add("collection_active_is-open");
+    }
+
+    //CLOSE COLLECTION DESCRIPTION FUNCTION
+    function closeCollection() {
+      collectionActiveEl[index].classList.remove("collection_active_is-open");
+    }
 
     //new array from remaining items
     const newArray1 = collectionWrapperEl.slice(0, index);
