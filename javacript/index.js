@@ -106,4 +106,14 @@ const collectionTitleAnimation = document.querySelectorAll(
 console.log(collectionTitleAnimation[0]);
 
 collectionTitleAnimation[0].style.animation =
-  "collectionTitleAnimation 5s linear reverse infinite";
+  "collectionTitleAnimation 20s linear infinite";
+collectionTitleAnimation[1].style.animation =
+  "collectionTitleAnimation 20s linear infinite";
+collectionTitleAnimation[2].style.animation =
+  "collectionTitleAnimation 20s linear infinite reverse";
+collectionTitleAnimation[3].style.animation =
+  "collectionTitleAnimation 20s linear infinite reverse";
+collectionTitleAnimation[4].style.animation =
+  "collectionTitleAnimation 20s linear infinite";
+collectionTitleAnimation[5].style.animation =
+  "collectionTitleAnimation 20s linear infinite";

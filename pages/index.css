@@ -176,8 +176,13 @@
   width: 100%;
   margin-bottom: -2rem;
 }
+
+.collection__main-title_line1 {
+  display: flex;
+}
+
 .collection__main-title {
-  font-size: 5rem;
+  font-size: 6vw;
   font-weight: 300;
   color: var(--oldrose);
   white-space: nowrap;
