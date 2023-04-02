@@ -210,6 +210,17 @@
   /* border-radius: 10px; */
 }
 
+@media screen and (max-width: 1280px) {
+  .collection__carousel {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .collection__carousel {
+    width: 100%;
+  }
+}
 .collection__thumbnail-wrapper {
   cursor: pointer;
   width: calc(100% / 7);
