@@ -183,10 +183,6 @@
   white-space: nowrap;
 }
 
-.collection__main-title:nth-of-type(2) {
-  transform: translateX(-50%);
-}
-
 .collection__main-title > span {
   color: black;
 }

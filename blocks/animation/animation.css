@@ -9,11 +9,11 @@
   }
 }
 
-@keyframes marquee {
-  0% {
-    transform: translateX(0);
+@keyframes collectionTitleAnimation {
+  from {
+    transform: translateX(0%);
   }
-  100% {
-    transform: translateX(-200vw);
+  to {
+    transform: translateX(-200%);
   }
 }

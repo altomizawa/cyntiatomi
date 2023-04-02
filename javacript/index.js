@@ -72,3 +72,38 @@ function hideShortTitle() {
 //CLOSE WRAPPER END
 
 //---------------------SCROLL TRIGGER COLLECTION SECTION---------------------
+// gsap.to(".collection__main-title:nth-of-type(1)", {
+//   scrollTrigger: ".collection__main-title",
+//   scrub: true,
+//   start: "top top",
+//   x: "-119%",
+//   repeat: -1,
+//   duration: 10,
+//   ease: "none",
+// });
+// gsap.to(".collection__main-title:nth-of-type(2)", {
+//   scrollTrigger: ".collection__main-title",
+//   scrub: true,
+//   x: "119%",
+//   repeat: -1,
+//   duration: 10,
+//   ease: "none",
+// });
+// gsap.to(".collection__main-title:nth-of-type(3)", {
+//   scrollTrigger: ".collection__main-title",
+//   scrub: true,
+//   x: "-119%",
+//   repeat: -1,
+//   duration: 10,
+//   ease: "none",
+// })
+
+//SELECT COLLECTION TITLE FOR ANIMATION
+
+const collectionTitleAnimation = document.querySelectorAll(
+  ".collection__main-title"
+);
+console.log(collectionTitleAnimation[0]);
+
+collectionTitleAnimation[0].style.animation =
+  "collectionTitleAnimation 5s linear reverse infinite";
