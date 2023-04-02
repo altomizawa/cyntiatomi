@@ -153,9 +153,9 @@
 .scroll-icon {
   position: absolute;
   padding: 0;
-  bottom: 0;
-  width: 200px;
-  height: 200px;
+  bottom: 4rem;
+  width: 300px;
+  height: 300px;
   z-index: 1;
 }
 
@@ -203,6 +203,10 @@
   box-shadow: -4px 0 4px rgba(0, 0, 0, 0.5);
   transition: 500ms ease-in-out;
 }
+.collection__thumbnail-wrapper:hover {
+  scale: 1.1;
+  filter: brightness(1.1);
+}
 
 .collection__thumbnail-wrapper_active {
   width: 80%;
@@ -226,7 +230,9 @@
 .collection__thumbnail {
   object-fit: cover;
   transition: 100ms ease-in;
+  height: 110%;
 }
+
 /* /* .collection__thumbnail_isactive {
   transform: scaleX(1.05);
   transition: 250ms;
