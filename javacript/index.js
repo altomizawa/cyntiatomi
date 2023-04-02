@@ -6,16 +6,15 @@ const collectionShortTitleEl = document.querySelectorAll(
 );
 
 const collectionActiveEl = document.querySelectorAll(".collection_active");
-const imagePosition = Array.from(
-  document.querySelectorAll(".collection__thumbnail")
-);
+const imagePosition = document.querySelectorAll(".collection__thumbnail");
 
 //-----------------CLICK TO OPEN FUNCTION-----------------------
 collectionWrapperEl.forEach((column, colIndex) => {
   column.addEventListener("click", () => {
     column.classList.toggle("collection__thumbnail-wrapper_active");
     console.log(imagePosition[colIndex]);
-    imagePosition[colIndex].style.objectPosition = "0";
+    imagePosition[colIndex].style.objectPosition = "0px";
+    // imagePosition[colIndex].classList.toggle("collection__thumbnail_isactive");
     hideShortTitle();
     setTimeout(showDescription, 500);
 

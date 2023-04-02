@@ -169,7 +169,7 @@
   padding-block: 3rem;
 }
 .collection__main-title {
-  font-size: 10rem;
+  font-size: 7rem;
   font-weight: 300;
   color: var(--oldrose);
   padding-bottom: 3rem;
@@ -187,7 +187,7 @@
 }
 
 .collection__carousel {
-  width: 100%;
+  width: 80%;
   height: 100%;
   overflow: hidden;
   display: flex;
@@ -225,13 +225,17 @@
 
 .collection__thumbnail {
   object-fit: cover;
+  transition: 100ms ease-in;
 }
+/* /* .collection__thumbnail_isactive {
+  transform: scaleX(1.05);
+  transition: 250ms;
+} */
 
-.collection__thumbnail_isactive {
+/* .collection__thumbnail_isactive {
   object-position: 0px;
   transition: 500ms ease-in;
-}
-
+} */
 .collection__thumbnail-title {
   font-family: "Raleway", sans-serif;
   font-size: 1rem;
@@ -292,7 +296,7 @@
   margin-top: 2rem;
   padding: 0.5rem;
   border: 1px solid black;
-  width: 6rem;
+  width: 10rem;
   display: flex;
   justify-content: center;
   cursor: pointer;
