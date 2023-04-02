@@ -13,8 +13,8 @@ collectionWrapperEl.forEach((column, colIndex) => {
   column.addEventListener("click", () => {
     column.classList.toggle("collection__thumbnail-wrapper_active");
     console.log(imagePosition[colIndex]);
-    imagePosition[colIndex].style.objectPosition = "0px";
-    // imagePosition[colIndex].classList.toggle("collection__thumbnail_isactive");
+    // imagePosition[colIndex].style.objectPosition = "0px";
+    imagePosition[colIndex].classList.toggle("collection__thumbnail_isactive");
     hideShortTitle();
     setTimeout(showDescription, 500);
 
@@ -70,3 +70,5 @@ function hideShortTitle() {
 //   });
 // });
 //CLOSE WRAPPER END
+
+//---------------------SCROLL TRIGGER COLLECTION SECTION---------------------
