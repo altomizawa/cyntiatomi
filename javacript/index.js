@@ -117,3 +117,31 @@ collectionTitleAnimation[4].style.animation =
   "collectionTitleAnimation 20s linear infinite";
 collectionTitleAnimation[5].style.animation =
   "collectionTitleAnimation 20s linear infinite";
+
+//----------------ACTIVATE DARK MODE FOR NAVBAR IF COLLECTION SECTION HITS TOP OF WINDOW----------------
+const windowTop = window.screenTop;
+const navbar = document.querySelector(".navbar_darkmode");
+const navbarMenuLink = document.querySelectorAll(".navbar__menu-link");
+const navbarLogo = document.querySelector(".navbar__logo");
+const navbarMenuButton = document.querySelector(".navbar__contact-button");
+
+document.addEventListener("scroll", (e) => {
+  const header = document.querySelector(".collection").getBoundingClientRect();
+  console.log(header.top);
+  if (windowTop > header.top) {
+    navbar.style.transition = "500ms";
+    navbar.style.opacity = "1";
+    navbarLogo.classList.add("navbar__logo_darkmode");
+    navbarMenuButton.classList.add("navbar__contact-button_darkmode");
+    navbarMenuLink.forEach((link) => {
+      link.classList.add("navbar__menu-link_darkmode");
+    });
+  } else {
+    navbar.style.opacity = "0";
+    navbarLogo.classList.remove("navbar__logo_darkmode");
+    navbarMenuButton.classList.remove("navbar__contact-button_darkmode");
+    navbarMenuLink.forEach((link) => {
+      link.classList.remove("navbar__menu-link_darkmode");
+    });
+  }
+});
