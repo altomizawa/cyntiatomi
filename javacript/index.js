@@ -103,7 +103,6 @@ function hideShortTitle() {
 const collectionTitleAnimation = document.querySelectorAll(
   ".collection__main-title"
 );
-console.log(collectionTitleAnimation[0]);
 
 collectionTitleAnimation[0].style.animation =
   "collectionTitleAnimation 20s linear infinite";
@@ -127,7 +126,6 @@ const navbarMenuButton = document.querySelector(".navbar__contact-button");
 
 document.addEventListener("scroll", (e) => {
   const header = document.querySelector(".collection").getBoundingClientRect();
-  console.log(header.top);
   if (windowTop > header.top) {
     navbar.style.transition = "500ms";
     navbar.style.opacity = "1";
